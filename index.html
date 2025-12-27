@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Linkora – Social Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Prevent favicon 404 -->
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="header-inner">
+    <h1 class="logo">Linkora</h1>
+
+    <!-- Logout only (shown after login) -->
+    <button id="logout-btn" class="btn danger" style="display:none;">
+      Log out
+    </button>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="page">
+  <div class="auth-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="auth-left">
+      <h2>
+        Connect with<br />
+        <span class="accent">confidence</span>
+      </h2>
+
+      <p class="description">
+        Linkora lets you securely sign in using your Facebook account
+        with a clean, modern, and user-friendly experience.
+      </p>
+
+      <p class="hint">
+        🔒 Secure authentication powered by Facebook
+      </p>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="auth-right">
+
+      <!-- LOGIN CARD -->
+      <div id="login-card" class="card login-card">
+        <h3>Sign in</h3>
+        <p class="card-subtitle">
+          Use your Facebook account to continue
+        </p>
+
+        <button id="login-btn" class="btn primary">
+          Login with Facebook
+        </button>
+      </div>
+
+      <!-- PROFILE CARD -->
+      <div id="profile-card" class="card profile" style="display:none;">
+        <img id="profile-picture" alt="Profile picture" />
+
+        <span class="badge">Connected via Facebook</span>
+
+        <h3 id="user-name"></h3>
+        <p id="user-email"></p>
+
+        <div class="extra-info">
+          <p id="user-birthday"></p>
+          <p id="user-age"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</body>
+</html>
