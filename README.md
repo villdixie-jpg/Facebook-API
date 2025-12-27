@@ -137,4 +137,3 @@ No ngrok needed
 This project is for educational and demonstration purposes only.
 
 It follows Facebook Platform Policies and respects user privacy.
-
